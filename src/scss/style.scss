@@ -1,5 +1,9 @@
-body {
-  .container {
-    max-width: 1200px;
-  }
-}
+@import 'reset';
+@import 'variables/colors';
+@import 'fonts';
+@import 'variables/text';
+
+////////COMPONENTS start//////////
+@import 'header';
+@import 'left-bar';
+////////COMPONENTS end////////////

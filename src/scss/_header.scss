@@ -1,0 +1,62 @@
+.header-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $headerBg;
+  color: $mainLinkColor;
+
+  &__dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 2px;
+
+      &--red {
+        background-color: $dotRed;
+      }
+
+      &--yellow {
+        background-color: $dotYellow;
+      }
+
+      &--green {
+        background-color: $dotGreen;
+      }
+    }
+  }
+
+  &__controls {
+    &__support-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        color: $mainLinkColor;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 13px;
+      }
+
+      .dot-divider {
+        width: 4px;
+        height: 4px;
+        background-color: #19202e;
+        display: block;
+        margin: 0 12px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

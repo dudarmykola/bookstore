@@ -4,8 +4,8 @@
         author: "dudarmykola"
         }; %>
 <%= _.template(require('./../includes/header.html'))(data) %>
-    <div class="container">
-        Hello world
+    <div class="main-wrapper">
+        <%= _.template(require('./../includes/left-bar.html'))(data) %>
     </div>
 <%= _.template(require('./../includes/footer.html'))(data) %>
 </main>

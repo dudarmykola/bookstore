@@ -1,5 +1,6 @@
 .left-bar {
   max-width: 200px;
+  min-height: 100%;
   background-color: $leftBarBg;
 
   &__add-btn-container {
@@ -14,9 +15,10 @@
   }
 
   &__add-btn {
+    transition: all 0.5s;
+    position: relative;
     border-radius: 4px;
     background-color: #f2795a;
-    padding: 16px;
     color: #fff;
     display: flex;
     flex-direction: row;
@@ -24,6 +26,7 @@
     align-items: center;
     text-decoration: none;
     min-width: 160px;
+    padding: 8px;
 
     i {
       margin-right: 20px;
@@ -39,6 +42,27 @@
       letter-spacing: normal;
       text-align: center;
       text-transform: uppercase;
+    }
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      background-color: rgba(195, 12, 12, 0.5);
+      transition: all 0.4s;
+      will-change: transform;
+      transform: scale(0.5, 1);
+    }
+
+    &:hover::before {
+      opacity: 1;
+      will-change: transform;
+      transform: scale(1, 1);
     }
   }
 
@@ -60,7 +84,7 @@
       line-height: 2;
       letter-spacing: normal;
       text-align: left;
-      padding: 14px 20px;
+      padding: 6px 20px;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -91,6 +115,7 @@
     border-top: 1px solid rgba($mainLinkColor, 0.5);
     border-bottom: 1px solid $bottomBlockColor;
     margin-bottom: 4px;
+    padding: 16px 0 10px 0;
 
     &__item {
       display: flex;
@@ -98,7 +123,7 @@
       justify-content: flex-start;
       align-items: center;
       width: 100%;
-      padding: 15px 25px;
+      padding: 14px 25px;
 
       .circle {
         width: 6px;
@@ -128,6 +153,51 @@
         font-size: 13px;
         text-transform: capitalize;
         text-decoration: none;
+      }
+
+      &:hover {
+        .circle {
+          will-change: transform;
+          transform: scale(1.5);
+          transition: transform 200ms ease;
+        }
+      }
+    }
+  }
+
+  &__history {
+    border-top: 1px solid rgba($mainLinkColor, 0.5);
+    border-bottom: 1px solid $bottomBlockColor;
+    background-color: $blockBg;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: $mainLinkColor;
+    padding: 18px 0;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 18px 18px 18px 20px;
+
+      i {
+        font-size: 16px;
+        margin-right: 13px;
+      }
+
+      .description {
+        line-height: 1.5;
+
+        &__title {
+          margin-bottom: 18px;
+
+          .highlight {
+            color: #97b3ce;
+          }
+        }
       }
     }
   }

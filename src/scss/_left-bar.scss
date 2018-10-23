@@ -1,5 +1,134 @@
 .left-bar {
-  &__nav {
+  max-width: 200px;
+  background-color: $leftBarBg;
 
+  &__add-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 115px;
+    background-color: $blockBg;
+    margin-bottom: 4px;
+    border-bottom: 1px solid $bottomBlockColor, 0.5;
+  }
+
+  &__add-btn {
+    border-radius: 4px;
+    background-color: #f2795a;
+    padding: 16px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    min-width: 160px;
+
+    i {
+      margin-right: 20px;
+    }
+
+    span {
+      font-family: $mainFont;
+      font-size: 14px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.86;
+      letter-spacing: normal;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  &__nav-menu {
+    border-top: 1px solid rgba($mainLinkColor, 0.5);
+    border-bottom: 1px solid $bottomBlockColor;
+    background-color: $blockBg;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin-bottom: 4px;
+
+    &__item {
+      color: $mainLinkColor;
+      text-decoration: none;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 2;
+      letter-spacing: normal;
+      text-align: left;
+      padding: 14px 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      will-change: background-color, color;
+      transition: all 200ms ease;
+      transition-property: background-color, color;
+
+      i {
+        font-size: 16px;
+        margin-right: 13px;
+      }
+
+      &:hover {
+        background-color: #15a4fa;
+        color: #fff;
+      }
+    }
+  }
+
+  &__flags {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: $blockBg;
+    border-top: 1px solid rgba($mainLinkColor, 0.5);
+    border-bottom: 1px solid $bottomBlockColor;
+    margin-bottom: 4px;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 15px 25px;
+
+      .circle {
+        width: 6px;
+        height: 6px;
+        border-radius: 6px;
+        margin-right: 15px;
+
+        &--red {
+          background-color: $dotRed;
+        }
+
+        &--yellow {
+          background-color: $dotYellow;
+        }
+
+        &--blue {
+          background-color: $dotBlue;
+        }
+
+        &--violet {
+          background-color: $dotViolet;
+        }
+      }
+
+      a {
+        color: $mainLinkColor;
+        font-size: 13px;
+        text-transform: capitalize;
+        text-decoration: none;
+      }
+    }
   }
 }

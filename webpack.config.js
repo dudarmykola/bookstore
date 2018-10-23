@@ -2,6 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 function generateHtmlPlugins(templateDir) {
     const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
@@ -25,6 +26,7 @@ module.exports = {
         './src/scss/style.scss',
     ],
     output: {
+        publicPath: '/',
         filename: './js/bundle.js'
     },
     devtool: "source-map",
@@ -51,14 +53,23 @@ module.exports = {
                         url: false
                     }
                 },
-                    {
-                        loader: "sass-loader",
-                        options: {
-                            sourceMap: true
-                        }
+                {
+                    loader: "resolve-url-loader"
+                },
+                {
+                    loader: "sass-loader",
+                    options: {
+                        sourceMap: true
                     }
+                },
+
                 ]
             })
+        },
+        {
+            test: /\.(woff|woff2|eot|ttf|svg)$/,
+            exclude: /node_modules/,
+            loader: 'url-loader?limit=1024&name=fonts/[name].[ext]'
         },
         {
             test: /\.html$/,
@@ -73,5 +84,11 @@ module.exports = {
             allChunks: true,
         }),
         new HtmlWebpackPlugin(),
+        new CopyWebpackPlugin([
+            {from:'src/img',to:'img'},
+            // {from:'src/fonts',to:'fonts'},
+            {from:'src/vendor/scss/fonts',to:'vendor/scss/fonts'},
+
+        ]),
     ].concat(htmlPlugins)
 };

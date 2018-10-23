@@ -4,16 +4,17 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   background-color: $headerBg;
   color: $mainLinkColor;
+  height: 45px;
 
   &__dots {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    width: 33%;
+    max-width: 50px;
 
     &__dot {
       width: 10px;
@@ -35,18 +36,43 @@
     }
   }
 
+  &__title {
+    width: 33%;
+    max-width: 120px;
+
+    i {
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
   &__controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 33%;
+
     &__support-container {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      width: 50%;
 
       a {
         color: $mainLinkColor;
         text-decoration: none;
         text-transform: capitalize;
         font-size: 13px;
+        width: 45%;
+
+        &:first-of-type {
+          text-align: right;
+        }
       }
 
       .dot-divider {
@@ -56,6 +82,43 @@
         display: block;
         margin: 0 12px;
         border-radius: 50%;
+      }
+    }
+
+    &__user-container {
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 6px 12px;
+      background-color: #15a4fa;
+      height: 100%;
+      width: 50%;
+
+      .avatar {
+        border: 2px solid #fff;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .name {
+        margin: 0 12px;
+      }
+
+      i {
+        font-size: 16px;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

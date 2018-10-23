@@ -1,9 +1,11 @@
-@import 'reset';
 @import 'variables/colors';
-@import 'fonts';
 @import 'variables/text';
-
+@import 'reset';
+@import 'fonts';
 ////////COMPONENTS start//////////
 @import 'header';
 @import 'left-bar';
+@import 'rate';
+@import '../vendor/scss/font-awesome/font-awesome';
+
 ////////COMPONENTS end////////////

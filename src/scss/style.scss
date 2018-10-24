@@ -3,12 +3,10 @@
 @import 'reset';
 @import 'fonts';
 @import '../vendor/scss/font-awesome/font-awesome';
-////////COMPONENTS start//////////
 @import 'header';
 @import 'left-bar';
 @import 'book-list';
 @import 'rate';
-////////COMPONENTS end////////////
 
 .main-wrapper {
   display: flex;

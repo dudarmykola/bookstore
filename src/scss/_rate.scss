@@ -1,6 +1,440 @@
 .rate {
-  &__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 
+  &__item {
+    .fa {
+      display: none;
+      color: $dotYellow;
+      margin: 0 2px;
+      &:nth-child(3) {
+        display: inline-block;
+      }
+    }
   }
 
+  &--5 {
+
+    .rate__item {
+      &:nth-child(1) {
+        .fa {
+          &:nth-child(2) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--10 {
+
+    .rate__item {
+      &:nth-child(1) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--15 {
+
+    .rate__item {
+      &:nth-child(1) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .fa {
+          &:nth-child(2) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--20 {
+
+    .rate__item {
+      &:nth-child(1) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+      &:nth-child(2) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--25 {
+
+    .rate__item {
+      &:nth-child(1) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+    .rate__item {
+
+      &:nth-child(2) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+      &:nth-child(3) {
+        .fa {
+          &:nth-child(2) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--30 {
+
+    .rate__item {
+      &:nth-child(1) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+      &:nth-child(2) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+    .rate__item {
+
+      &:nth-child(3) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--35 {
+
+    .rate__item {
+      &:nth-child(1) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+      &:nth-child(2) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+    .rate__item {
+
+      &:nth-child(3) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+
+      &:nth-child(4) {
+        .fa {
+          &:nth-child(2) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--40 {
+
+    .rate__item {
+      &:nth-child(1) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+      &:nth-child(2) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+    .rate__item {
+
+      &:nth-child(3) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+
+      &:nth-child(4) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--45 {
+
+    .rate__item {
+      &:nth-child(1) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+      &:nth-child(2) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+    .rate__item {
+
+      &:nth-child(3) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+
+      &:nth-child(4) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+
+      &:nth-child(5) {
+        .fa {
+          &:nth-child(2) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--50 {
+
+    .rate__item {
+      &:nth-child(1) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+      &:nth-child(2) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+    .rate__item {
+
+      &:nth-child(3) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+
+      &:nth-child(4) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rate__item {
+
+      &:nth-child(5) {
+        .fa {
+          &:nth-child(1) {
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

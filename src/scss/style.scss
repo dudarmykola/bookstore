@@ -1,5 +1,6 @@
 @import 'variables/colors';
 @import 'variables/text';
+@import 'variables/media';
 @import 'reset';
 @import 'fonts';
 @import '../vendor/scss/font-awesome/font-awesome';
@@ -11,4 +12,8 @@
 .main-wrapper {
   display: flex;
   flex-direction: row;
+
+  @media screen and (max-width: $breakMiddle) {
+    padding-top: $headerHeight;
+  }
 }

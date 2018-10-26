@@ -9,6 +9,121 @@
   height: $headerHeight;
   width: 100%;
 
+  &__menu-toggle {
+    display: none;
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 5px;
+
+    &:hover {
+      background: rgba(255, 255, 255, .8);
+    }
+
+    * {
+      transition: all 200ms ease-in-out;
+    }
+
+    span {
+      display: block;
+      background: #566973;
+      border-radius: 2px;
+    }
+
+    &__hamburger {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+
+      span {
+        width: 24px;
+        height: 4px;
+        position: relative;
+        top: -2px;
+        left: 4px;
+        margin: 6px 0;
+
+        &:nth-child(1) {
+          transition-delay: .5s;
+        }
+
+        &:nth-child(2) {
+          transition-delay: .625s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: .75s;
+        }
+      }
+    }
+
+    &__cross {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transform: rotate(44deg);
+
+      span {
+        &:nth-child(1) {
+          height: 0;
+          width: 4px;
+          position: absolute;
+          top: 13%;
+          left: 15px;
+          transition-delay: 0s;
+        }
+
+        &:nth-child(2) {
+          width: 0;
+          height: 4px;
+          position: absolute;
+          left: 12%;
+          top: 14px;
+          transition-delay: .25s;
+        }
+      }
+    }
+
+    &--open {
+      .header-bar__menu-toggle__hamburger {
+        span {
+          width: 0;
+
+          &:nth-child(1) {
+            transition-delay: 0s;
+          }
+
+          &:nth-child(2) {
+            transition-delay: .125s;
+          }
+
+          &:nth-child(3) {
+            transition-delay: .25s;
+          }
+        }
+      }
+
+      .header-bar__menu-toggle__cross {
+        span {
+          &:nth-child(1){
+            height:78%;
+            transition-delay: .625s;
+          }
+        }
+
+        span {
+          &:nth-child(2) {
+            width:80%;
+            transition-delay: .375s;
+          }
+        }
+      }
+    }
+  }
+
   &__dots {
     display: flex;
     flex-direction: row;
@@ -146,6 +261,10 @@
   .header-bar {
     position: fixed;
 
+    &__menu-toggle {
+      display: block;
+    }
+
     &__dots {
       width: 25%;
     }
@@ -177,7 +296,6 @@
 
     &__dots {
       width: 30%;
-      padding-left: 20px;
     }
 
     &__controls {
@@ -200,9 +318,12 @@
           position: absolute;
           background-color: $headerBg;
           width: 100%;
-          top: -45px;
+          top: -$headerHeight;
+          opacity: 0.1;
+          transition: all 200ms ease-in-out;
 
           &--collapsed {
+            opacity: 1;
             top: $headerHeight;
           }
         }

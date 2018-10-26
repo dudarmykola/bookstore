@@ -1,0 +1,37 @@
+.footer-bar {
+  background-color: $leftBarBg;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 20px;
+  color: #fff;
+  height: $footerHeight;
+  width: 100%;
+
+  &__controls {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    &__help {
+      width: 55px;
+      background-color: #1f2637;
+      cursor: pointer;
+
+      i {
+        @include centerize(relative);
+      }
+    }
+
+    &__service {
+      width: 55px;
+      background-color: #15a4fa;
+      cursor: pointer;
+
+      i {
+        @include centerize(relative);
+      }
+    }
+  }
+}

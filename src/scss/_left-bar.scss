@@ -211,6 +211,8 @@
     overflow-y: scroll;
     left: -200px;
     top: 45px;
+    z-index: 2;
+    transition: left 200ms ease-in-out;
 
     &--collapsed {
       left: 0;

@@ -1,6 +1,7 @@
 @import 'variables/colors';
 @import 'variables/text';
 @import 'variables/media';
+@import 'mixins/mixins';
 @import 'reset';
 @import 'fonts';
 @import '../vendor/scss/font-awesome/font-awesome';
@@ -8,6 +9,7 @@
 @import 'left-bar';
 @import 'book-list';
 @import 'rate';
+@import 'footer';
 
 .main-wrapper {
   display: flex;

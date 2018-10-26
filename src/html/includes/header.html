@@ -12,6 +12,17 @@
 <body>
 <header>
     <div class="header-bar">
+        <div id="menu-toggle" class="header-bar__menu-toggle">
+            <div id="hamburger" class="header-bar__menu-toggle__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="cross" class="header-bar__menu-toggle__cross">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
         <div class="header-bar__dots">
             <span class="header-bar__dots__dot header-bar__dots__dot--red"></span>
             <span class="header-bar__dots__dot header-bar__dots__dot--yellow"></span>
@@ -23,12 +34,12 @@
         </div>
         <div class="header-bar__controls">
             <div class="header-bar__controls__support-container">
-                <div class="help">
+                <div id="help" class="help">
                     <a href="#">help center</a>
                     <span class="dot-divider"></span>
                     <a href="#">our support</a>
                 </div>
-                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                <i id="support-toggle" class="fa fa-question-circle-o" aria-hidden="true"></i>
             </div>
             <div class="header-bar__controls__user-container">
                 <figure class="avatar">

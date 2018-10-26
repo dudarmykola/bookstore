@@ -1,13 +1,11 @@
-<main>
-    <% var data = {
-            title: "Bookstore | ",
-            author: "dudarmykola"
-            };
-    %>
-    <%= _.template(require('./../includes/header.html'))(data) %>
-        <div class="main-wrapper">
-            <%= _.template(require('./../includes/left-bar.html'))(data) %>
-            <%= _.template(require('./../includes/book-list.html'))(data) %>
-        </div>
-    <%= _.template(require('./../includes/footer.html'))(data) %>
-</main>
+<% var data = {
+        title: "Bookstore | ",
+        author: "dudarmykola"
+        };
+%>
+<%= _.template(require('./../includes/header.html'))(data) %>
+    <div class="main-wrapper">
+        <%= _.template(require('./../includes/left-bar.html'))(data) %>
+        <%= _.template(require('./../includes/book-list.html'))(data) %>
+    </div>
+<%= _.template(require('./../includes/footer.html'))(data) %>
